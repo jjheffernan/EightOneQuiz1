@@ -1,3 +1,4 @@
+import java.lang.StringBuilder;
 
 public class StringUtilities {
     /**
@@ -5,7 +6,8 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+
+        return input;
     }
 
     /**
@@ -14,7 +16,9 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        String baseVal = baseValue;
+        String output = baseVal.concat(valueToBeAdded);
+        return output;
     }
 
     /**
@@ -22,7 +26,13 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        // needed to add stringbuilder, no reason to use a costly for loop
+        StringBuilder str = new StringBuilder();
+        String input = valueToBeReversed;
+        str.append(input);
+        str.reverse();
+        String output = String.valueOf(str);
+        return output;
     }
 
     /**
