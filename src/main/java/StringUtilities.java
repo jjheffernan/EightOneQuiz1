@@ -40,9 +40,7 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        int length = word.length();
-        int center = length/2;
-        char output = word.charAt(center);
+        char output = word.charAt((word.length())/2);
         return output;
     }
 
@@ -52,7 +50,17 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        StringBuilder str = new StringBuilder();
+        int length = value.length();
+        String output = value;
+        for (int i =0; i <=length; i++) {
+            if ( value.charAt(i) == charToRemove) {
+                // output = value.replace(charToRemove.toString(), "");}
+                str.deleteCharAt(i);
+
+            }
+        }
+        return output;
     }
 
     /**
