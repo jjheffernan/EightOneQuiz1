@@ -40,7 +40,10 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        int length = word.length();
+        int center = length/2;
+        char output = word.charAt(center);
+        return output;
     }
 
     /**
