@@ -55,7 +55,7 @@ public class MathUtilities{
    * @return the result of the number multiply by itself
    */
   public Integer square(Integer number) {
-      return null;
+      return number * number;
   }
 
 }
