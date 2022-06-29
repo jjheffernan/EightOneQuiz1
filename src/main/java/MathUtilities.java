@@ -1,4 +1,4 @@
- 
+ import java.lang.Math;
 
 public class MathUtilities{
     
@@ -9,7 +9,8 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Integer add(Integer baseValue, Integer valueToAdd){
-      return null;
+
+      return baseValue + valueToAdd;
   }
 
   /**
@@ -19,7 +20,8 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Double add(Double baseValue, Double valueToAdd){
-      return null;
+
+      return baseValue + valueToAdd;
   }
 
   /**
@@ -28,7 +30,8 @@ public class MathUtilities{
    * @return the half of the number in double
    */
   public Double half(Integer number) {
-      return null;
+
+      return (double) number /2 ;
   }
 
   /**
