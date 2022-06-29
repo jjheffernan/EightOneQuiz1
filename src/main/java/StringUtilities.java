@@ -51,15 +51,16 @@ public class StringUtilities {
      */
     public String removeCharacter(String value, Character charToRemove) {
         StringBuilder str = new StringBuilder();
-        int length = value.length();
-        String output = value;
-        for (int i =0; i <=length; i++) {
+        String input = value;
+        str.append(input);
+        for (int i =0 ; i < value.length(); i++) {
             if ( value.charAt(i) == charToRemove) {
                 // output = value.replace(charToRemove.toString(), "");}
                 str.deleteCharAt(i);
 
             }
         }
+        String output = String.valueOf(str);
         return output;
     }
 
