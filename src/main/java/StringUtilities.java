@@ -57,6 +57,7 @@ public class StringUtilities {
             if ( value.charAt(i) == charToRemove) {
                 // output = value.replace(charToRemove.toString(), "");}
                 str.deleteCharAt(i);
+                // str.replace(i,i,"");
 
             }
         }
@@ -69,6 +70,9 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        //StringBuilder str = new StringBuilder();
+        // str.append(sentence);
+        return sentence.substring(sentence.lastIndexOf(" ")+1);
+        // String output = String.valueOf(str);
     }
 }
