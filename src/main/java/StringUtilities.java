@@ -52,13 +52,14 @@ public class StringUtilities {
     public String removeCharacter(String value, Character charToRemove) {
         StringBuilder str = new StringBuilder();
         String input = value;
+        int count = 0;
         str.append(input);
         for (int i =0 ; i < value.length(); i++) {
             if ( value.charAt(i) == charToRemove) {
                 // output = value.replace(charToRemove.toString(), "");}
-                str.deleteCharAt(i);
+                str.deleteCharAt(i-count);
                 // str.replace(i,i,"");
-
+                count += 1;
             }
         }
         String output = String.valueOf(str);
