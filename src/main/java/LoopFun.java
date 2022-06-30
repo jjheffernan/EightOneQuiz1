@@ -11,8 +11,11 @@ public class LoopFun
        */
       public Integer factorial(Integer number){
           int fact = 1;
-          for (int i = 1; i  <= number; i++) {fact = fact * i;}
+          for (int i = 1; i <= number; i++) {fact = fact * i;}
           return fact;
+
+         // return (number == 1 ) || (number == 0 ) ? 1: number*factorial(number-1);
+            // if its true, it runs as number = 1. This can be dangerous
       }
 
       /**
@@ -25,7 +28,7 @@ public class LoopFun
       public String acronym(String phrase) {
             
           String[] words = phrase.split("\\W+");
-          String output = "";
+          String output = ""; // this is sloppy coding
           for (int i = 0; i <words.length; i++) {
               // System.out.println(words[i]); // tests if words are being split
               output += words[i].charAt(0);
