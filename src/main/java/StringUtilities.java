@@ -83,5 +83,6 @@ public class StringUtilities {
         // return sentence.substring(sentence.lastIndexOf(" ")+1);
         String[] strArr = sentence.split(" ");
         return strArr[strArr.length-1];
+            // this is more robust, as the spaces do not matter within a string Array
     }
 }
