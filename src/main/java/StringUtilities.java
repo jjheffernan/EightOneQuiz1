@@ -16,9 +16,11 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        String baseVal = baseValue;
+        /*String baseVal = baseValue;
         String output = baseVal.concat(valueToBeAdded);
-        return output;
+        return output;*/
+        return baseValue.concat(valueToBeAdded); // didnt need to introduce local variable
+        // another option would be return baseValue + valueToBeAdded
     }
 
     /**
@@ -27,12 +29,15 @@ public class StringUtilities {
      */
     public String reverse(String valueToBeReversed) {
         // needed to add stringbuilder, no reason to use a costly for loop
-        StringBuilder str = new StringBuilder();
+        /*StringBuilder str = new StringBuilder();
         String input = valueToBeReversed;
         str.append(input);
         str.reverse();
         String output = String.valueOf(str);
-        return output;
+        return output;*/
+
+        return new StringBuilder(valueToBeReversed).reverse().toString(); // above in a single line
+
     }
 
     /**
@@ -40,8 +45,9 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        char output = word.charAt((word.length())/2);
-        return output;
+        /*char output = word.charAt((word.length())/2);
+        return output;*/
+        return word.charAt((word.length()/2));
     }
 
     /**
@@ -50,10 +56,9 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        StringBuilder str = new StringBuilder();
-        String input = value;
+        /*StringBuilder str = new StringBuilder();
         int count = 0;
-        str.append(input);
+        str.append(value);
         for (int i =0 ; i < value.length(); i++) {
             if ( value.charAt(i) == charToRemove) {
                 // output = value.replace(charToRemove.toString(), "");}
@@ -62,8 +67,11 @@ public class StringUtilities {
                 count += 1;
             }
         }
-        String output = String.valueOf(str);
-        return output;
+        // String output = String.valueOf(str);
+        return String.valueOf(str);
+        // removed local variables when available*/
+
+        return value.replaceAll(String.valueOf(charToRemove),"");
     }
 
     /**
@@ -71,9 +79,9 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        //StringBuilder str = new StringBuilder();
-        // str.append(sentence);
-        return sentence.substring(sentence.lastIndexOf(" ")+1);
-        // String output = String.valueOf(str);
+
+        // return sentence.substring(sentence.lastIndexOf(" ")+1);
+        String[] strArr = sentence.split(" ");
+        return strArr[strArr.length-1];
     }
 }
