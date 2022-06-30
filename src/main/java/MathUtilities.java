@@ -31,7 +31,8 @@ public class MathUtilities{
    */
   public Double half(Integer number) {
 
-      return (double) number /2 ;
+      return number /2.0 ; // by dividing by double, it autocasts to double versus forced cast.
+            // will cause theoretically less errors
   }
 
   /**
@@ -40,12 +41,14 @@ public class MathUtilities{
    * @return true if the number is odd, false if it is even
    */
   public Boolean isOdd(Integer number){
-      if (number %2 != 0 ) {
-          return true;
-      } else {
-          return false;
-      }
 
+      return number % 2 != 0; // also works
+     /* if (number %2 != 0 ) {
+          return true;
+      } else { // not totally necessary, if the only other thing is return false, java will automatically get it
+          return false;
+      }*/
+      // return null;
   }
 
 
